@@ -1,7 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 import { Navbar,NavbarBrand } from 'reactstrap';
-import './App.css';
+import Menu from './components/MenuComponent';
 
 function App() {
   return (
@@ -12,8 +12,7 @@ function App() {
 
       </div>
       </Navbar>
-      <h1>Header 1</h1>
-      
+      <Menu/>
     </div>
   );
 }
