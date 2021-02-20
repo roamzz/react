@@ -3,12 +3,25 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle, CardSubti
 
 class Menu extends Component {
 
+    /*
+        mounting lifecycle methods:
+            -constructor(),
+            -getDerivedStateFromProps(),
+            -render(),
+            -componentDidMount()
+    */
+
     constructor(props){
         super(props);
         
         this.state = {
             selectedDish: null
         }
+    }
+
+    componentDidMount(){
+        console.log("component has mounted!!");
+        
     }
 
     //methods
@@ -22,6 +35,12 @@ class Menu extends Component {
                 <h1>{dish.name}</h1>
             );
         }
+    }
+
+    welcome(){
+        return (
+            <p>Welcome Hello World!</p>
+        );
     }
 
     render(){
@@ -52,6 +71,9 @@ class Menu extends Component {
                     <div className="col-12 col-md-5 m-1">
                         {this.displayDish(this.state.selectedDish)}
                     </div>
+                </div>
+                <div>
+                {this.welcome()}
                 </div>
             </div>
         );
