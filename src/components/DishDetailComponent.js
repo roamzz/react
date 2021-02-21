@@ -29,61 +29,57 @@ class DishDetail extends Component {
             return(
                 <div></div>
             );
-        
-
     }  
 
-    //render function
-    render(){
-   
-         const comments = this.state.comments.map( (comment, i) => {             
-             if (this.props.dish != null){
-                if (this.props.dish.id === comment.dishId){
-                    return (
-                            <li key={comment.id}>
-                                <p>{comment.comment}</p>
-                                <p>
-                                    -- {comment.author} ,{" "}
-                                    {new Intl.DateTimeFormat("en-US", {
-                                    year: "numeric",
-                                    month: "short",
-                                    day: "2-digit"
-                                    }).format(new Date(Date.parse(comment.date)))}
-                                </p>
-                            </li>
-                        
-                    );
-                } else {
-                    return (
-                        false
-                    );
-                }
-                   
-             }
+    renderComments(dish){    
+        if (dish != null){                
             
-            });
-        
-        
+            return(
+                <div className="col-12 col-md-5 ml-1">
+                <h4>Comments</h4>
+                    <ul className="list-unstyled">
+                        {dish.comments.map( (comment) => {
+                            return (
+                                <div key={comment.id}>
+                                    <p>{comment.comment}</p>
+                                </div>
 
-        return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 col-sm-5">
-                        {this.renderDish(this.props.dish)}
-                    </div>
-                    <div className="col-12 col-sm-5 ml-1">
-                    <h5>Comments</h5>
-                    {comments}
-                    </div>
-
+                            );
+                        })}
+                        
+                    </ul>
                 </div>
-            </div>
-        );
+            );
+        }
+        else {
+            return(
+                <div></div>
+            );
+        }
 
     }
 
-
-
+    //render function
+    render(){
+        if (this.props.dish != null) {
+            return (
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-md-5 ml-1">
+                        {this.renderDish(this.props.dish)}
+                        </div>
+                       
+                        {this.renderComments(this.props.dish)}
+                    </div>
+                </div>
+            );
+        } else{
+            return (
+                <div></div>
+            );
+        }
+            
+    }
 }
 
 export default DishDetail;
