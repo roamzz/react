@@ -39,8 +39,8 @@ class DishDetail extends Component {
             if(this.props.selectedDish === null) return;
             if(comment.dishId === this.props.selectedDish.id){
                 return (
-                    <div key={comment.id} className="col-12 col-md-12 m-1">
-                    <li key={comment.id}>
+                    <ul key={comment.id} className="col-12 col-md-12 m-1 list-unstyled">
+                    <li>
                         <p>{comment.comment}</p>
                         <p>
                             -- {comment.author} ,{" "}
@@ -51,7 +51,7 @@ class DishDetail extends Component {
                             }).format(new Date(Date.parse(comment.date)))}
                   </p>
                     </li>
-                    </div>
+                    </ul>
                 );
 
             } 
