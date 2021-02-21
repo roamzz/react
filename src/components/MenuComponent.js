@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle, CardSubtitle, Button} from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle} from 'reactstrap';
 
 class Menu extends Component {
 
@@ -20,7 +20,6 @@ class Menu extends Component {
     }
 
     componentDidMount(){
-        console.log("component has mounted!!");
         
     }
 
@@ -30,11 +29,20 @@ class Menu extends Component {
     }
 
     displayDish(dish){
-        if(dish){
-            return (
-                <h1>{dish.name}</h1>
+        if (dish != null)
+            return(
+                <Card>
+                    <CardImg top src={dish.image} alt={dish.name} />
+                    <CardBody>
+                      <CardTitle>{dish.name}</CardTitle>
+                      <CardText>{dish.description}</CardText>
+                    </CardBody>
+                </Card>
             );
-        }
+        else
+            return(
+                <div></div>
+            );
     }
 
     welcome(){
@@ -53,8 +61,6 @@ class Menu extends Component {
                   <CardBody>
                     <CardImgOverlay>
                     <CardTitle>{dish.name}</CardTitle>
-                    {/* <CardSubtitle>{dish.description}</CardSubtitle> */}
-                    {/* <Button>Button</Button> */}
                     </CardImgOverlay>
                   </CardBody>
                 </Card>
@@ -65,15 +71,12 @@ class Menu extends Component {
         return (
             <div className="container">
                 <div className="row">
-                        {menu}
+                    {menu}
                 </div>
                 <div className="row">
                     <div className="col-12 col-md-5 m-1">
                         {this.displayDish(this.state.selectedDish)}
                     </div>
-                </div>
-                <div>
-                {this.welcome()}
                 </div>
             </div>
         );
