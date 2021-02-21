@@ -12,7 +12,7 @@ class DishDetail extends Component {
             comments: COMMENTS
         }
     }
-
+    
     renderDish(selectedDish){
         
         if (selectedDish != null)
@@ -35,40 +35,49 @@ class DishDetail extends Component {
 
     //render function
     render(){
-        const comments = this.state.comments.map( (comment) => {
-            if(this.props.selectedDish === null) return;
-            if(comment.dishId === this.props.selectedDish.id){
-                return (
-                    <ul key={comment.id} className="col-12 col-md-12 m-1 list-unstyled">
-                    <li>
-                        <p>{comment.comment}</p>
-                        <p>
-                            -- {comment.author} ,{" "}
-                            {new Intl.DateTimeFormat("en-US", {
-                            year: "numeric",
-                            month: "short",
-                            day: "2-digit"
-                            }).format(new Date(Date.parse(comment.date)))}
-                  </p>
-                    </li>
-                    </ul>
-                );
-
-            } 
-                
-        });
+   
+         const comments = this.state.comments.map( (comment, i) => {             
+             if (this.props.dish != null){
+                if (this.props.dish.id === comment.dishId){
+                    return (
+                            <li key={comment.id}>
+                                <p>{comment.comment}</p>
+                                <p>
+                                    -- {comment.author} ,{" "}
+                                    {new Intl.DateTimeFormat("en-US", {
+                                    year: "numeric",
+                                    month: "short",
+                                    day: "2-digit"
+                                    }).format(new Date(Date.parse(comment.date)))}
+                                </p>
+                            </li>
+                        
+                    );
+                } else {
+                    return (
+                        false
+                    );
+                }
+                   
+             }
+            
+            });
+        
+        
 
         return (
+            <div className="container">
                 <div className="row">
                     <div className="col-12 col-sm-5">
-                        {this.renderDish(this.props.selectedDish)}
+                        {this.renderDish(this.props.dish)}
                     </div>
                     <div className="col-12 col-sm-5 ml-1">
                     <h5>Comments</h5>
-                        {comments}
+                    {comments}
                     </div>
 
                 </div>
+            </div>
         );
 
     }
