@@ -3,6 +3,7 @@ import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './MenuComponent';
 import DishDetail from './DishDetailComponent';
 import { DISHES } from '../shared/dishes';
+import CommentList from './CommentList';
 
 class Main extends Component {
 
@@ -36,6 +37,8 @@ class Main extends Component {
         </Navbar>
         <Menu dishes={this.state.dishes} onClick={(dishId) => this.onDishSelect(dishId)} />
         <DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDishId)[0]} />
+        <CommentList />
+
       </div>
     );
   }
