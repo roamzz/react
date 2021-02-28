@@ -6,6 +6,14 @@ import { DISHES } from '../shared/dishes';
 
 class Main extends Component {
 
+      /*
+        mounting lifecycle methods:
+            -constructor(),
+            -getDerivedStateFromProps(),
+            -render(),
+            -componentDidMount()
+    */
+
   constructor(props) {
     super(props);
     this.state = {
