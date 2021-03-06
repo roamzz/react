@@ -1,43 +1,19 @@
-import React, { Component } from 'react';
-import { COMMENTS } from '../shared/comments';
+import React from 'react';
 
-
-class CommentList extends Component {
-    constructor(props){
-        super(props);
-        
-        //set the initial state
-        this.state = {
-            comments: COMMENTS
-        };
-    }
-
-    //mounted
-    componentDidMount() {        
-        // this.setState({ comments: [{author: "author1"}, {author: 'author2'}]});
-    }
-  
-    //unmounted
-    componentWillUnmount() {
-
-
-    } 
-
-    render(){
-        return (
-            <div>
-            <h2>Authors</h2>
-            <ul>
-                {
-                    this.state.comments.map ( ({author}, index) => 
-                        <li key={index}>{author}</li>
-                    )
-                }     
-            </ul>
-            </div>
-        );
-    }
-
+function CommentList(props) {
+  return (
+   
+      <div>
+         <h1 className="mt-4 mb-4">Functional Component that displays only this view:</h1>
+          {props.comments.map(comment => { // using props in child component and looping
+              return (
+                <ul key={comment.id}>
+                  <li>{comment.id} | {comment.author} | {comment.comment}</li>
+                </ul>
+              );
+          })}
+      </div>  
+  );
 }
 
 export default CommentList;
