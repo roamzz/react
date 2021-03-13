@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import COMMENTS  from '../shared/comments';
+import COMMENTSOLD  from '../shared/commentsold';
 import CommentList from "./CommentList";
 
 
@@ -9,7 +9,7 @@ class CommentListContainer extends Component {
         
         //set the initial state
         this.state = {
-            comments: COMMENTS
+            comments: COMMENTSOLD
         };
     }
 

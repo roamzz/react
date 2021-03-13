@@ -1,4 +1,4 @@
-export const COMMENTS = 
+const COMMENTS = 
 [
     {
         id: 0,
@@ -45,7 +45,7 @@ export const COMMENTS =
         dishId: 1,
         rating: 5,
         comment: "Imagine all the eatables, living in conFusion!",
-        author: "John Lemon",
+        author: "John Lemon1",
         date: "2012-10-16T17:57:28.556094Z"
     },
     {
@@ -53,7 +53,7 @@ export const COMMENTS =
         dishId: 1,
         rating: 4,
         comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
-        author: "Paul McVites",
+        author: "Paul McVites1",
         date: "2014-09-05T17:57:28.556094Z"
     },
     {
@@ -61,7 +61,7 @@ export const COMMENTS =
         dishId: 1,
         rating: 3,
         comment: "Eat it, just eat it!",
-        author: "Michael Jaikishan",
+        author: "Michael Jaikishan1",
         date: "2015-02-13T17:57:28.556094Z"
     },
     {
@@ -69,7 +69,7 @@ export const COMMENTS =
         dishId: 1,
         rating: 4,
         comment: "Ultimate, Reaching for the stars!",
-        author: "Ringo Starry",
+        author: "Ringo Starry1",
         date: "2013-12-02T17:57:28.556094Z"
     },
     {
@@ -140,7 +140,7 @@ export const COMMENTS =
         id: 17,
         dishId: 3,
         rating: 3,
-        comment: "Eat it, just eat it!",
+        comment: "3Eat it, just eat it!",
         author: "Michael Jaikishan",
         date: "2015-02-13T17:57:28.556094Z"
     },
@@ -161,3 +161,5 @@ export const COMMENTS =
         date: "2011-12-02T17:57:28.556094Z"
     }
 ];
+
+export default COMMENTS;
