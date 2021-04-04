@@ -6952,6 +6952,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"icepick@npm:^1.1.0":
+  version: 1.3.0
+  resolution: "icepick@npm:1.3.0"
+  checksum: f2276b960ecad441e7948d9ea4327299392be7b7d9359592dd7bca8f2d238be240aed6cbb4771fd6ec52eefd0e09e6e16ea89f792381acc5789dde1776be2213
+  languageName: node
+  linkType: hard
+
 "iconv-lite@npm:0.4.24, iconv-lite@npm:^0.4.24, iconv-lite@npm:^0.4.4":
   version: 0.4.24
   resolution: "iconv-lite@npm:0.4.24"
@@ -7202,7 +7209,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"invariant@npm:^2.0.0, invariant@npm:^2.2.2, invariant@npm:^2.2.4":
+"invariant@npm:^2.0.0, invariant@npm:^2.2.2, invariant@npm:^2.2.4, invariant@npm:~2.2.1":
   version: 2.2.4
   resolution: "invariant@npm:2.2.4"
   dependencies:
@@ -8661,6 +8668,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"lodash.get@npm:~4.4.2":
+  version: 4.4.2
+  resolution: "lodash.get@npm:4.4.2"
+  checksum: 447e575e3caa5131ef44e5a0c135b1614f3c937d86b3be0568f9da7b0fd015010af3b6b4e41edf6e2698c9ce2dcc061ca71b31f274f799c991dceb018be16e4f
+  languageName: node
+  linkType: hard
+
 "lodash.memoize@npm:^4.1.2":
   version: 4.1.2
   resolution: "lodash.memoize@npm:4.1.2"
@@ -8691,6 +8705,13 @@ fsevents@^1.2.7:
   dependencies:
     lodash._reinterpolate: ^3.0.0
   checksum: 45546a5b76376b138ef4f01aa2722813127c639428eb9baef3fbac176b509ee2dab5cb9d1ee8267dbeeef8d49371f9a748af3df83649bf8b75fa54993f65b7aa
+  languageName: node
+  linkType: hard
+
+"lodash.topath@npm:~4.5.2":
+  version: 4.5.2
+  resolution: "lodash.topath@npm:4.5.2"
+  checksum: c635ffd3586817e6beeff174d0e39015a1df88b885d9ba742587a2bd047af13cd9662870e0cce90ef706f6468127105488a96a8778d5d7c4af0358d025782c6b
   languageName: node
   linkType: hard
 
@@ -9265,6 +9286,7 @@ fsevents@^1.2.7:
     react-dom: ^16.13.1
     react-popper: ^2.2.3
     react-redux: 5.0.7
+    react-redux-form: 1.16.8
     react-router-dom: ^5.2.0
     react-scripts: 3.4.3
     reactstrap: ^8.6.0
@@ -11308,7 +11330,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.5.8, prop-types@npm:^15.6.0, prop-types@npm:^15.6.1, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
+"prop-types@npm:^15.5.6, prop-types@npm:^15.5.8, prop-types@npm:^15.6.0, prop-types@npm:^15.6.1, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
   dependencies:
@@ -11610,6 +11632,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"react-native-segmented-control-tab@npm:^3.2.1":
+  version: 3.4.1
+  resolution: "react-native-segmented-control-tab@npm:3.4.1"
+  checksum: 8df0aa3a16a43731080d7f5897913664141a0bc36303469fd2d56961af825f65c689715f00762412e242b0b182381ff01b5a960a02006bc2b524da8eb033de6a
+  languageName: node
+  linkType: hard
+
 "react-popper@npm:^1.3.6":
   version: 1.3.7
   resolution: "react-popper@npm:1.3.7"
@@ -11637,6 +11666,26 @@ fsevents@^1.2.7:
     "@popperjs/core": ^2.0.0
     react: ^16.8.0
   checksum: 1dbc4a9c385c406fc374ef0a813fc1c9e82a1a00bc71e356b63ead36addea2a819b779e3fa844a2050f4749e9068be26d2078579d0eeffacc67caecc2b05f91d
+  languageName: node
+  linkType: hard
+
+"react-redux-form@npm:1.16.8":
+  version: 1.16.8
+  resolution: "react-redux-form@npm:1.16.8"
+  dependencies:
+    icepick: ^1.1.0
+    invariant: ~2.2.1
+    lodash.get: ~4.4.2
+    lodash.topath: ~4.5.2
+    prop-types: ^15.5.6
+    react-native-segmented-control-tab: ^3.2.1
+    shallow-compare: ^1.2.1
+  peerDependencies:
+    react: ^15.3.0 || ^16.0.0
+    react-dom: ^0.14.7 || ^15.0.0 || ^16.0.0
+    react-redux: ^4.0.0 || ^5.0.3
+    redux: ^3.0.0
+  checksum: 9f707b5c635b79445c754a7adb953b4ecc5775ea3e8e863ac6ec4ca4c020a457456c3dc46876670d14efb07d630969a293522dad24708b2c9088d2dde7392c75
   languageName: node
   linkType: hard
 
@@ -12713,6 +12762,13 @@ resolve@1.15.0:
   dependencies:
     kind-of: ^6.0.2
   checksum: e329e054c286f0681fd8a9e5c353999519332f12510a99e189ea9cfa0337adb6f1414639d44493418ef6790a693b78c354525269f5db25a9feddd8b4d7891a62
+  languageName: node
+  linkType: hard
+
+"shallow-compare@npm:^1.2.1":
+  version: 1.2.2
+  resolution: "shallow-compare@npm:1.2.2"
+  checksum: 40709b58510a9fb5177c216a51f1a6c91a9679254ee0549476d6817dc28707e3fe8ce27456cfebc8f05c87ed88ae71923731493c7d7df816b01ef4477b417bfe
   languageName: node
   linkType: hard
 

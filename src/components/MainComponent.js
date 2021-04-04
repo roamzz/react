@@ -3,6 +3,7 @@ import Home from './HomeComponent';
 import About from './AboutComponent';
 import Menu from './MenuComponent';
 import Contact from './ContactComponent';
+import ContactRedux from './ContactReduxComponent';
 import DishDetail from './DishDetailComponent';
 import CommentListContainer from './CommentListContainer';
 import Header from './HeaderComponent';
@@ -60,6 +61,7 @@ class Main extends Component {
           <Route exact path="/menu" component={() => <Menu dishes={this.props.dishes}/>} />
           <Route path="/menu/:dishId" component={DishWithId} />
           <Route exact path='/contactus' component={Contact} />
+          <Route exact path='/contactusredux' component={ContactRedux} />
           <Redirect to="/home" />
         </Switch>
         <Footer />
