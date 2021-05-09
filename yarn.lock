@@ -4344,6 +4344,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cross-fetch@npm:2.1.0":
+  version: 2.1.0
+  resolution: "cross-fetch@npm:2.1.0"
+  dependencies:
+    node-fetch: 2.1.1
+    whatwg-fetch: 2.0.3
+  checksum: cf1b37b5e108656f7fcd2031fd59feb1f146937dea14f58870d6e400dac25967643c5c6395716cceabe4503d6e967a6e4a9e567f49bfba21b92d5ac810ca875b
+  languageName: node
+  linkType: hard
+
 "cross-spawn@npm:7.0.1":
   version: 7.0.1
   resolution: "cross-spawn@npm:7.0.1"
@@ -9288,6 +9298,7 @@ fsevents@^1.2.7:
     "@testing-library/user-event": ^7.1.2
     bootstrap: ^4.5.3
     bootstrap-social: ^5.1.1
+    cross-fetch: 2.1.0
     font-awesome: 4.7.0
     react: ^16.13.1
     react-dom: ^16.13.1
@@ -9386,6 +9397,13 @@ fsevents@^1.2.7:
     lower-case: ^2.0.1
     tslib: ^1.10.0
   checksum: 619e0bd00a3ef0fa6ad9442d32c88adcf47339c5b0d9bdfaaab19380709dad5ba71f865ae584531988ba85a6083e1f0ea0b851bcc49c67aee40a5100104e84b9
+  languageName: node
+  linkType: hard
+
+"node-fetch@npm:2.1.1":
+  version: 2.1.1
+  resolution: "node-fetch@npm:2.1.1"
+  checksum: 2e9fea5dd6759e536b9037b7b609c52a97357378b669351b1b8020283ddb2b983c42d0f34524c4e634f5009ff708a802fbf66e774080dff816725bed458ba403
   languageName: node
   linkType: hard
 
@@ -14473,6 +14491,13 @@ resolve@1.15.0:
   dependencies:
     iconv-lite: 0.4.24
   checksum: 44e4276ad2c770d1eb8c5a49294b863c581ef4bc78a10ac6a73a7eba00b377bc53ae0501d7ffce29a2c051b6af5ebbbd135f1da7d8eb98097af2cf12f7b2c984
+  languageName: node
+  linkType: hard
+
+"whatwg-fetch@npm:2.0.3":
+  version: 2.0.3
+  resolution: "whatwg-fetch@npm:2.0.3"
+  checksum: f4b94199f8d18c19f9034ad45a4568f34d6e7db79754b7648b4aca971a2ee94a300a43a8f336208b012c868b6910764109f7dde2d6fd8ed7c589e0ec251f516c
   languageName: node
   linkType: hard
 
